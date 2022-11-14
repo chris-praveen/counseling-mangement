@@ -1,0 +1,73 @@
+#include <iostream>
+
+using namespace std;
+class coun
+{
+    private:
+    //int patient;
+    int course;
+   
+    public:
+    void get()
+    {
+        //cin>>patient;
+    }
+    void coursename()
+    {
+        cout<<"What type of coure you are applicable: \n";
+        cout<<"1.Civil\n";
+        cout<<"2.Mechanical\n";
+        cout<<"3.Mechatronics\n";
+        cout<<"4.Automobile\n";
+        cout<<"5.Computer Technology\n";
+        cout<<"Enter your choice: \n";
+       
+        cin>>course;
+       
+       
+    }
+   
+    void appoint()
+    {
+       switch(course)
+        {
+            case 1:
+            cout<<"Your appointment is fixed for Mr. P. Ramanujan hod(Civil)\n";
+            break;
+            case 2:
+            cout<<"Your appointment is fixed for Mr.R.Valluvan hod(Mechamnical)\n";
+            break;
+            case 3:
+            cout<<"Your appointment is fixed for Mr.A.Ranganathan hod(Mechatronics)\n";
+            break;
+            case 4:
+            cout<<"Your appointment is fixed for Mr.R.Vallbhai hod(Automobile)\n";
+            break;
+            case 5:
+            cout<<"Your appointment is fixed for Mr.R.Vasoolraja hod(Computer Technalogy)\n";
+            break;
+           
+            default:
+            cout<<"Your expecting course is not founded\n";
+        }
+    }
+   
+   
+};
+
+int main()
+{
+    int n,i;
+    cout<<"Enter the number of students: ";
+    cin>>n;
+    coun p[n];
+    for(i=0;i<n;i++)
+    {
+        cout<<"Student no "<<i+1<<"\n";
+        p[i].get();
+        p[i].coursename();
+        p[i].appoint();
+    }
+    return 0;
+}
+
